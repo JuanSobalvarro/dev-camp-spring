@@ -20,7 +20,7 @@ public interface PaymentRepository extends JpaRepository<Payment, String> {
     List<Payment> findByStudentId(String studentId);
 
     // Method to find payments by paymentStatus
-    List<Payment> findByPaymentStatus(PaymentStatus paymentStatus);
+    List<Payment> findByStatus(PaymentStatus paymentStatus);
 
     // Method to find payments by paymentType
     List<Payment> findByPaymentType(PaymentType paymentType);
