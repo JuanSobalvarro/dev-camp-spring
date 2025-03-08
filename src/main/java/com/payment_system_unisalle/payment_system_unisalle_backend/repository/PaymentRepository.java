@@ -13,4 +13,16 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, String> {
 
+    // Find payment by id
+    Payment findById(Long id);
+
+    // Personalized method to search payments by studentId
+    List<Payment> findByStudentId(String studentId);
+
+    // Method to find payments by paymentStatus
+    List<Payment> findByPaymentStatus(PaymentStatus paymentStatus);
+
+    // Method to find payments by paymentType
+    List<Payment> findByPaymentType(PaymentType paymentType);
+
 }
